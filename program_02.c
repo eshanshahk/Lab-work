@@ -6,7 +6,7 @@ int main() {
     printf("Enter a string \n");
     scanf("%[^\n]",str);
 
-    while(str[length]!=0){
+    while(str[length]!='\0'){
     length++;
     }
     printf("Length of the string is %d", length);
