@@ -5,6 +5,10 @@ int main() {
     int i;
     printf("Enter a string to check whether it's palindrome or not! \n");
     scanf("%s", str);
-
+    if (str[i]==)
+    {
+        /* code */
+    }
+    
     return 0;
 }
