@@ -2,6 +2,6 @@
  #include <stdlib.h>
  
  int main() {
-  hi
+  int a,b;
      return 0;
  }
