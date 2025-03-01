@@ -4,5 +4,6 @@ Write a C program to add and multiply two complex numbers.*/
 #include <stdlib.h>
 
 int main() {
+    int a;
     return 0;
 }
