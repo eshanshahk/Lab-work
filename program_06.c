@@ -15,52 +15,58 @@ A:
         switch (option)
         {
         case 1:
-            int arr1[4][4],arr2[4][4],sum[4][4],i,j,size;
-printf("Enter the size of array : ");
-scanf("%d",&size);
-printf("Enter array 1 ");
-for(i=0;i<size;i++)
-{
-	for(j=0;j<size;j++)
-	{
-		scanf("%d",&arr1[i][j]);
-	}
-}
-printf("Enter array 2 ");
-for(i=0;i<size;i++)
-{
-	for(j=0;j<size;j++)
-	{
-		scanf("%d",&arr2[i][j]);
-	}
-}
-for(i=0;i<size;i++)
-{
-	for(j=0;j<size;j++)
-	{
-		sum[i][j]=arr1[i][j]+arr2[i][j];
-	}
-}
-printf("Sum is \n");
-for(i=0;i<size;i++)
-{
-	for(j=0;j<size;j++)
-	{
-		printf("%d \t",sum[i][j]);
-	}printf("\n");
-}
-return 0;
-}
-
-                    break;
+#include <stdio.h>
+            int main()
+            {
+                int arr1[4][4], arr2[4][4], sum[4][4], i, j, size;
+                printf("Enter the size of array : ");
+                scanf("%d", &size);
+                printf("Enter array 1 ");
+                for (i = 0; i < size; i++)
+                {
+                    for (j = 0; j < size; j++)
+                    {
+                        scanf("%d", &arr1[i][j]);
+                    }
                 }
+                printf("Enter array 2 ");
+                for (i = 0; i < size; i++)
+                {
+                    for (j = 0; j < size; j++)
+                    {
+                        scanf("%d", &arr2[i][j]);
+                    }
+                }
+                for (i = 0; i < size; i++)
+                {
+                    for (j = 0; j < size; j++)
+                    {
+                        sum[i][j] = arr1[i][j] + arr2[i][j];
+                    }
+                }
+                printf("Sum is \n");
+                for (i = 0; i < size; i++)
+                {
+                    for (j = 0; j < size; j++)
+                    {
+                        printf("%d \t", sum[i][j]);
+                    }
+                    printf("\n");
+                }
+                return 0;
             }
-        default:
+
             break;
         }
-    } while (option = 1);
-    {
-        goto A;
     }
-    return 0;
+default:
+    break;
+}
+}
+while (option = 1)
+    ;
+{
+    goto A;
+}
+return 0;
 }
