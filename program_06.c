@@ -112,6 +112,7 @@ default:
 }
 }
 while (option = 1)
+    {}
     ;
 {
     goto A;
