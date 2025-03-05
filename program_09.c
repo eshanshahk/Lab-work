@@ -4,5 +4,7 @@
 
 int main()
 {
+    int num;
+    printf();
     return 0;
 }
