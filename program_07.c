@@ -4,6 +4,20 @@
 
 int main()
 {
-    int a, b;
+    int arr[][],n;
+    printf("Enter the size of the array");
+    scanf(" %d", &n);
+    printf("Enter the array elements\n");
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            scanf(" %d", &arr[i][j]);
+        }
+    }
+    printf("Entered array is \n");
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            printf(" %d", arr[i][j]);
+        }printf("\n");
+    }
     return 0;
 }

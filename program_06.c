@@ -15,45 +15,107 @@ A:
         switch (option)
         {
         case 1:
-            printf("Enter array 1");
-            for (i = 0; i < size; i++)
+#include <stdio.h>
+            int main()
             {
-                for (j = 0; j < size; j++)
-                {
-                    scanf("%d", &arr1[i][j]);
-                }
-            }
-            printf("Enter array 2");
-            for (i = 0; i < size; i++)
-            {
-                for (j = 0; j < size; j++)
-                {
-                    scanf("%d", &arr2[i][j]);
-                }
-                printf("Enter array 2");
+                int arr1[4][4], arr2[4][4], sum[4][4], i, j, size;
+                printf("Enter the size of array : ");
+                scanf("%d", &size);
+                printf("Enter array 1 ");
                 for (i = 0; i < size; i++)
                 {
                     for (j = 0; j < size; j++)
                     {
-                        sum[10][10] = arr1[i][j] + arr2[i][j];
+                        scanf("%d", &arr1[i][j]);
                     }
-                    for (i = 0; i < size; i++)
-                    {
-                        for (j = 0; i < size; j++)
-                        {
-                            printf("%d", sum[i][j]);
-                        }
-                    }
-
-                    break;
                 }
+                printf("Enter array 2 ");
+                for (i = 0; i < size; i++)
+                {
+                    for (j = 0; j < size; j++)
+                    {
+                        scanf("%d", &arr2[i][j]);
+                    }
+                }
+                for (i = 0; i < size; i++)
+                {
+                    for (j = 0; j < size; j++)
+                    {
+                        sum[i][j] = arr1[i][j] + arr2[i][j];
+                    }
+                }
+                printf("Sum is \n");
+                for (i = 0; i < size; i++)
+                {
+                    for (j = 0; j < size; j++)
+                    {
+                        printf("%d \t", sum[i][j]);
+                    }
+                    printf("\n");
+                }
+                return 0;
             }
-        default:
+
             break;
-        }
-    } while (option = 1);
+        case 2 :
+#include <stdio.h>
+int main()
+{
+
+    int arr1[4][4], arr2[4][4], result[4][4], i, j, k, size;
+    printf("Enter the size of array : ");
+    scanf("%d", &size);
+    printf("Enter array 1 ");
+    for (i = 0; i < size; i++)
     {
-        goto A;
+        for (j = 0; j < size; j++)
+        {
+            scanf("%d", &arr1[i][j]);
+        }
+    }
+    printf("Enter array 2 ");
+    for (i = 0; i < size; i++)
+    {
+        for (j = 0; j < size; j++)
+        {
+            scanf("%d", &arr2[i][j]);
+        }
+    }
+    for (i = 0; i < size; i++)
+    {
+        for (j = 0; j < size; j++)
+        {
+            for (k = 0; k < size; k++)
+            {
+                result[i][j] += arr1[i][k] * arr2[k][j];
+            }
+        }
+    }
+
+    printf("Resultant matrix:\n");
+    for (i = 0; i < size; i++)
+    {
+        for (j = 0; j < size; j++)
+        {
+            printf("%d ", result[i][j]);
+        }
+        printf("\n");
     }
     return 0;
+}break;
+    case 3 :
+    
+        }
+    }
+default:
+    break;
+}
+}
+while (option = 1)
+    {}
+    ;
+{
+    goto A;
+}
+return 0;
 }
