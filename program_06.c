@@ -32,6 +32,7 @@ int main()
 {
     int choice, size;
     do
+
     {
         printf("Enter your choice\n");
         printf("1. Matrix Addition \n"
