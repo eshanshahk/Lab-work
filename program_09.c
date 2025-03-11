@@ -1,15 +1,21 @@
 // Write a recursive function to print the n th Fibonacci number
 #include <stdio.h>
 #include <stdlib.h>
-void fact(int);
-void fact(int a){
-    
+int fibonacci(int);
+int fibonacci(int a){
+    if(a<=1)
+    {
+        return a;
+    }
+    else{
+        return fibonacci(a-1) + fibonacci(a-2);
+    }
 }
 int main()
 {
     int num;
-    printf(" Enter a number to find its factorial");
+    printf(" Enter a nth digit of fibonacci series");
     scanf(" %d", &num);
-    fact(num);
+    printf("Fibonacci number at position %d is %d\n", num, fibonacci(num));
     return 0;
 }
