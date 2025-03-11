@@ -18,4 +18,5 @@ int main()
     scanf(" %d", &num);
     printf("Fibonacci number at position %d is %d\n", num, fibonacci(num));
     return 0;
+    
 }
