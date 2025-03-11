@@ -1,9 +1,9 @@
-#include<stdio.h>
+//Program 24 : Read and print the details of a book using class
 #include<iostream>
 using namespace std;
 class car{
 public:
-  char brand;
+  string brand;
   int model;
   int year;
 void inputdetails()
@@ -17,12 +17,13 @@ void inputdetails()
 }
 void display()
 {
-  cout<<"brand"<<brand<<"model"<<model<<"year"<<year;
+  cout<<"brand= "<<brand<<" model= "<<model<<" year= "<<year;
 }
+};
 
 int main(){
-  int b1;
+  car b1;
   b1.inputdetails();
-  b1.dispaly();
+  b1.display();
   return 0;
 }
