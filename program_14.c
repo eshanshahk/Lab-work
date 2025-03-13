@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-char rev(char a, int i)
+void rev(char a, int i)
 {
     for (int *i; i > 0; i--)
         printf("%s", a[i]);
@@ -15,6 +15,7 @@ int main()
     printf("Enter the string");
     scanf("%s", str);
     i = strlen(str);
-    printf("Reversed string is : %d", rev(str, i));
+    rev(str, i);
+    printf("Reversed string is : ");
     return 0;
 }
