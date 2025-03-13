@@ -1,38 +1,10 @@
 // Write a menu driven program to perform matrix addition, multiplication, transpose
 #include <stdio.h>
-int array1(int);
-int array1(int a)
-{
-    int arr1[4][4], i, j;
-    printf("Enter array 1 ");
-    for (i = 0; i < a; i++)
-    {
-        for (j = 0; j < a; j++)
-        {
-            scanf("%d", &arr1[i][j]);
-        }
-    }
-}
-int array2(int);
-int array1(int a)
-{
-    printf("Enter array 2 ");
-    int arr2[4][4], i, j;
-
-    for (i = 0; i < a; i++)
-    {
-        for (j = 0; j < a; j++)
-        {
-            scanf("%d", &arr2[i][j]);
-        }
-    }
-}
 
 int main()
 {
     int choice, size;
     do
-
     {
         printf("Enter your choice\n");
         printf("1. Matrix Addition \n"
@@ -48,9 +20,7 @@ int main()
             int arr1[4][4], arr2[4][4], sum[4][4], i, j, size;
             printf("Enter the size of array : ");
             scanf("%d", &size);
-            int array1(size);
-            int array2(size);
-            /*printf("Enter array 1 ");
+            printf("Enter array 1 ");
             for (i = 0; i < size; i++)
             {
                 for (j = 0; j < size; j++)
@@ -65,7 +35,7 @@ int main()
                 {
                     scanf("%d", &arr2[i][j]);
                 }
-            }*/
+            }
             for (i = 0; i < size; i++)
             {
                 for (j = 0; j < size; j++)
