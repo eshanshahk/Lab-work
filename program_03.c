@@ -4,7 +4,7 @@ int main()
 {
     char str[100];
     int word = 0, count = 0;
-    printf("Enter a sentence");
+    printf("Enter a sentence : ");
     scanf("%[^\n]", str);
 
     while (str[word] != '\0')
