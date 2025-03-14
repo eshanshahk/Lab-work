@@ -1,21 +1,24 @@
 // Write a C program to print the elements of an array in reverse order using pointers.
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
-void rev(char a, int i)
+void rev(char *a, int len)
 {
-    for (int *i; i > 0; i--)
-        printf("%s", a[i]);
+    for (int i = len - 1; i >= 0; i--)
+    {
+        printf("%c", a[i]);
+    }
 }
+
 int main()
 {
-    int i;
     char str[20];
-    printf("Enter the string");
+    printf("Enter the string: ");
     scanf("%s", str);
-    i = strlen(str);
-    rev(str, i);
-    printf("Reversed string is : ");
+
+    int len = strlen(str);
+    printf("Reversed string is: ");
+    rev(str, len);
+
     return 0;
 }
