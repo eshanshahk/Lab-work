@@ -17,14 +17,20 @@ public:
     }
     void display()
     {
-        cout << "brand= " << brand << " model= " << model << " year= " << year;
+        cout << "\nbrand= " << brand << "\nmodel= " << model << "\nyear= " << year;
     }
 };
 
 int main()
 {
-    car b1;
-    b1.inputdetails();
-    b1.display();
+    car b1[3];
+    for (int i = 0; i < 3; i++)
+    {
+        b1[i].inputdetails();
+    }
+    for (int i = 0; i < 3; i++)
+    {
+        b1[i].display();
+    }
     return 0;
 }
