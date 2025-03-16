@@ -1,31 +1,51 @@
-// Program 24 : Read and print the details of a book using class
 #include <iostream>
 using namespace std;
-class car
+float circle(float a)
 {
-public:
-  string brand;
-  int model;
-  int year;
-  void inputdetails()
-  {
-    cout << "Enter Brand Name : ";
-    cin >> brand;
-    cout << "Enter the Model : ";
-    cin >> model;
-    cout << "Enter the Year : ";
-    cin >> year;
-  }
-  void display()
-  {
-    cout << "brand= " << brand << " model= " << model << " year= " << year;
-  }
-};
+  return 3.14 * a;
+}
+int circle(int a)
+{
+  return a * a;
+}
+int circle(int a, int b)
+{
+  return a * b;
+}
 
 int main()
 {
-  car b1;
-  b1.inputdetails();
-  b1.display();
+  int op;
+  cout << "Enter your desired operation \n 1.Circle \n 2.Square \n 3.Rectangle \n";
+  cin >> op;
+  switch (op)
+  {
+  case 1:
+  {
+    float c;
+    cout << "Enter the radius of the circle : ";
+    cin >> c;
+    cout << circle(c);
+  }
+  break;
+  case 2:
+  {
+    int sq;
+    cout << "Enter the side of the square : ";
+    cin >> sq;
+    cout << circle(sq);
+  }
+  break;
+  case 3:
+  {
+    int s1, s2;
+    cout << "Enter the two sides of the rectangle : ";
+    cin >> s1 >> s2;
+    cout << circle(s1, s2);
+  }
+  break;
+  default:
+    cout << "Invalid input";
+  }
   return 0;
 }

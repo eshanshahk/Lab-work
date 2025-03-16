@@ -1,40 +1,40 @@
-// Read the details and print the details of book using class
 #include <iostream>
+#include <string>
 using namespace std;
-class book
+
+class bill
 {
-  int BookID;
-  string Book_Name;
-  float Book_Price;
-  int Total_Cost;
+private:
+	string name;
+	string address;
+	int tellno, nos;
 
 public:
-  void read() void details() void total_cost()
+	void details()
+	{
+		cout << "Enter your name : ";
+		cin >> name;
+		cout << "Enter your address : ";
+		cin >> address;
+		cout << "Enter you telephone no : ";
+		cin >> tellno;
+		cout << "Enter no of calls : ";
+		cin >> nos;
+	}
+	friend void payment(bill);
 };
-
-void book::read()
+void payment(bill b)
 {
-  cout << "Enter the BookID" << "Book_Name" << "Book_Price";
-  cin >> BookID >> Book_Name >> Book_Price;
+	int amount = b.nos * 2;
+	cout << "NAME : " << b.name;
+	cout << "\n ADDRESS :" << b.address;
+	cout << "\n Telephone No :" << b.tellno;
+	cout << "\n Amount :" << amount;
 }
-void book::details(){
-    cout << "BookID" << BookID << "Book_Name" << Book_Name << "Book_price" << Book_Price ";
-}
-
-int book::total_cost()
-{
-  int nos;
-  cout << "Enter No of copies needed"
-          ";
-          cin >>
-      nos;
-  total_cost = Book_Price * nos;
-  return total_cost;
-}
-
 int main()
 {
-  book b[3];
-
-    return 0;
+	bill b;
+	b.details();
+	payment(b);
+	return 0;
 }
