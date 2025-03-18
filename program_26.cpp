@@ -15,24 +15,44 @@ class Time
 public:
     void timenow()
     {
-        cout << "Hours now : ";
+        cout << "Enter Hours: ";
         cin >> hours;
-        cout << "Minutes now : ";
+        cout << "Enter Minutes: ";
         cin >> minutes;
-        cout << "Seconds now : ";
+        cout << "Enter Seconds: ";
         cin >> seconds;
     }
+
     void timeprint()
     {
-        cout << hours << " hour \t";
-        cout << minutes << " minute \t";
-        cout << seconds << " seconds \t";
+        cout << hours << ":" << minutes << ":" << seconds << endl;
     }
+
+    friend Time sumTime(Time, Time);
 };
+
+Time sumTime(Time t1, Time t2)
+{
+    Time t3;
+    t3.seconds = t1.seconds + t2.seconds;
+    t3.minutes = t1.minutes + t2.minutes + (t3.seconds / 60);
+    t3.seconds %= 60;
+    t3.hours = t1.hours + t2.hours + (t3.minutes / 60);
+    t3.minutes %= 60;
+    return t3;
+}
 
 int main()
 {
-    Time t;
-    t.timenow();
-    t.timeprint();
+    Time t1, t2, t3;
+    cout << "Enter first time:\n";
+    t1.timenow();
+    cout << "Enter second time:\n";
+    t2.timenow();
+
+    t3 = sumTime(t1, t2);
+
+    cout << "Sum of times: ";
+    t3.timeprint();
+    return 0;
 }
