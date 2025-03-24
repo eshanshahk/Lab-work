@@ -47,7 +47,7 @@ int main()
 
     for (int i = 0; i < 3; ++i)
     {
-        cout << "Area of shape " << i + 1 << ": " << shapes[i]->calculateArea() << endl;
+        cout << "Area of the shape " << i + 1 << ": " << shapes[i]->calculateArea() << endl;
         delete shapes[i];
     }
     return 0;
